@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>[Developer Name] — App Developer</title>
+<meta name="description" content="[Developer Name] builds mobile apps including [App Name].">
+<style>
+  :root{
+    --ink:#132119;
+    --paper:#F2ECDD;
+    --moss:#2F4A38;
+    --moss-light:#3E5F49;
+    --amber:#C98A2C;
+    --amber-soft:#E4B368;
+    --line: rgba(242,236,221,0.16);
+    --maxw: 880px;
+  }
+  *{box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    margin:0;
+    background:var(--ink);
+    color:var(--paper);
+    font-family: 'Iowan Old Style','Palatino Linotype',Georgia,serif;
+    line-height:1.55;
+    -webkit-font-smoothing:antialiased;
+  }
+  a{color:var(--amber-soft);text-decoration:none;}
+  a:hover{text-decoration:underline;}
+  a:focus-visible, button:focus-visible{
+    outline:2px solid var(--amber-soft);
+    outline-offset:3px;
+  }
+  .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px;}
+
+  header.hero{
+    padding:96px 0 64px;
+    border-bottom:1px solid var(--line);
+  }
+  .eyebrow{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    font-size:12px;
+    color:var(--amber-soft);
+    margin:0 0 18px;
+  }
+  h1{
+    font-size:clamp(2.2rem,5vw,3.4rem);
+    line-height:1.08;
+    margin:0 0 20px;
+    font-weight:600;
+    letter-spacing:-0.01em;
+  }
+  .lede{
+    font-size:1.15rem;
+    max-width:56ch;
+    color:rgba(242,236,221,0.82);
+    margin:0;
+  }
+
+  section{padding:56px 0;border-bottom:1px solid var(--line);}
+  section:last-of-type{border-bottom:none;}
+  h2{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:13px;
+    text-transform:uppercase;
+    letter-spacing:.14em;
+    color:var(--amber-soft);
+    margin:0 0 28px;
+  }
+
+  .apps{display:grid;gap:20px;}
+  .app-card{
+    display:grid;
+    grid-template-columns:56px 1fr auto;
+    gap:18px;
+    align-items:center;
+    padding:20px;
+    border:1px solid var(--line);
+    border-radius:10px;
+    background:var(--moss);
+    transition:border-color .18s ease, transform .18s ease;
+  }
+  .app-card:hover{border-color:var(--amber-soft);transform:translateY(-1px);}
+  .app-icon{
+    width:56px;height:56px;border-radius:14px;
+    background:linear-gradient(160deg,var(--amber-soft),var(--amber));
+    display:flex;align-items:center;justify-content:center;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-weight:700;color:var(--ink);font-size:20px;
+    flex-shrink:0;
+  }
+  .app-info h3{margin:0 0 4px;font-size:1.1rem;font-weight:600;}
+  .app-info p{margin:0;font-size:.92rem;color:rgba(242,236,221,0.72);}
+  .app-link{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:13px;letter-spacing:.04em;
+    padding:9px 16px;border:1px solid var(--amber-soft);
+    border-radius:6px;white-space:nowrap;color:var(--amber-soft);
+  }
+  .app-link:hover{background:var(--amber-soft);color:var(--ink);text-decoration:none;}
+
+  .contact-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:28px;
+  }
+  .contact-item .label{
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:12px;text-transform:uppercase;letter-spacing:.1em;
+    color:rgba(242,236,221,0.55);margin:0 0 6px;
+  }
+  .contact-item .value{font-size:1.05rem;margin:0;}
+
+  footer{
+    padding:32px 0 56px;
+    font-family:'Helvetica Neue',Arial,sans-serif;
+    font-size:13px;
+    color:rgba(242,236,221,0.5);
+    display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;
+  }
+  footer nav a{margin-right:18px;color:rgba(242,236,221,0.7);}
+
+  @media (max-width:520px){
+    header.hero{padding:64px 0 44px;}
+    .app-card{grid-template-columns:44px 1fr;grid-template-areas:"icon info" "link link";}
+    .app-icon{grid-area:icon;width:44px;height:44px;font-size:16px;}
+    .app-info{grid-area:info;}
+    .app-link{grid-area:link;text-align:center;margin-top:10px;}
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">App Developer</p>
+    <h1>[Developer / Studio Name]</h1>
+    <p class="lede">We build [one-line description of what your apps do — e.g. "simple, focused tools for everyday tasks"]. This page is the official developer site listed on Google Play.</p>
+  </div>
+</header>
+
+<section aria-labelledby="apps-heading">
+  <div class="wrap">
+    <h2 id="apps-heading">Apps</h2>
+    <div class="apps">
+      <div class="app-card">
+        <div class="app-icon">A</div>
+        <div class="app-info">
+          <h3>[App Name]</h3>
+          <p>[One-sentence description of what the app does.]</p>
+        </div>
+        <a class="app-link" href="[Google Play listing URL]">View on Play</a>
+      </div>
+      <!-- Duplicate the .app-card block above for each additional app -->
+    </div>
+  </div>
+</section>
+
+<section aria-labelledby="support-heading">
+  <div class="wrap">
+    <h2 id="support-heading">Support</h2>
+    <div class="contact-grid">
+      <div class="contact-item">
+        <p class="label">Email</p>
+        <p class="value"><a href="mailto:[support@example.com]">[support@example.com]</a></p>
+      </div>
+      <div class="contact-item">
+        <p class="label">Response time</p>
+        <p class="value">[e.g. within 2 business days]</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap" style="display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between;width:100%;">
+    <span>© <span id="year"></span> [Developer / Studio Name]</span>
+    <nav>
+      <a href="[Privacy Policy URL]">Privacy Policy</a>
+      <a href="mailto:[support@example.com]">Contact</a>
+    </nav>
+  </div>
+</footer>
+
+<script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+</body>
+</html>
